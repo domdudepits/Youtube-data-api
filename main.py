@@ -1,9 +1,12 @@
 from flask import Flask, jsonify, request
 from data_fetcher import scrap
+from gunicorn import app
+
 
 
 
 app = Flask(__name__)
+server = app.server
 
 @app.route('/')
 def test():
