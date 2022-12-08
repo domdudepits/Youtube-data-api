@@ -1,2 +1,4 @@
 gunicorn
 flask
+requests_html
+bs4
