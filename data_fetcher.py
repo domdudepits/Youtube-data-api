@@ -13,3 +13,5 @@ def scrap(url):
  pdate = soup.find("meta", itemprop="datePublished")['content']
  result = {"Views": views, "Date Published": pdate}
  return result
+
+#pushed into repo
