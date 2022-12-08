@@ -4,6 +4,7 @@ from data_fetcher import scrap
 
 
 app = Flask(__name__)
+server = app.server
 
 @app.route('/')
 def test():
