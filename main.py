@@ -12,10 +12,16 @@ class Data(Resource):
     result = scrap(new_url[1:])
     return jsonify(result)
     return result
+
     
 
 api.add_resource(Data, '/<path:url>', methods=['GET'])
 
+
+@app.route('/')
+def welcome():
+  return "<h1> Add a YouTube URL as an ENDPOINT </h1>"
+  
 
 
 if __name__ == '__main__':
