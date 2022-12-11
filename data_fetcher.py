@@ -1,11 +1,12 @@
-from requests_html import HTMLSession 
+from requests import get
 from bs4 import BeautifulSoup as bs
+
+
 def scrap(url):
  views = ''
  pdate = ''
- session = HTMLSession()
- response = session.get(url)
- soup = bs(response.html.html, "html.parser")
+ response = get(url)
+ soup = bs(response.content, "html.parser")
 
 
  views = soup.find("meta", itemprop="interactionCount")['content']
