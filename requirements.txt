@@ -3,3 +3,4 @@ gunicorn
 flask
 requests_html
 bs4
+flask_restful
