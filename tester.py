@@ -1,9 +1,10 @@
 import  requests
 from bs4 import BeautifulSoup as bs
-from xmltojson import parse
+import pandas as pd
 
-url = 'https://www.youtube.com/watch?v=MAu1fPqlivk'
-response = requests.get(url)
-soup = bs(response.content, "html.parser")
-# result = parse(soup)
-print(soup)
+df = pd.read_excel('Zee Music Company.xlsx')
+for url in df['youtube link']:
+ response = requests.get(f"http://127.0.0.1:5000/{url}")
+ data = requests.json()
+ print(data)
+
